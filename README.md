@@ -1,0 +1,2 @@
+# SectionedExpandableRecyclerView
+An improvement recyclerview-expandable integrated with SectionedRecyclerViewAdapter
