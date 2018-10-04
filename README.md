@@ -6,6 +6,18 @@ Usage
 
 Download
 --------
+```gradle
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+  
+dependencies {
+	        implementation 'com.github.Phanapoch:SectionedExpandableRecyclerView:0.1.0'
+	}
+```
 
 ## reference projects
 - [recyclerview-expandable](https://github.com/hendraanggrian/recyclerview-expandable)
