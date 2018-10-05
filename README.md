@@ -1,6 +1,8 @@
 # SectionedExpandableRecyclerView
 An improvement recyclerview-expandable integrated with SectionedRecyclerViewAdapter
 
+![SectionedExpandableRecyclerView GIF](https://github.com/Phanapoch/SectionedExpandableRecyclerView/blob/master/demo/demo1.gif)
+
 Usage
 -----
 1. create `SectionedExpandableRecyclerView` somewhere in your app
@@ -110,9 +112,10 @@ dependencies {
 }
 ```
 
-## reference projects
+## Credits project
 - [recyclerview-expandable](https://github.com/hendraanggrian/recyclerview-expandable)
 - [SectionedRecyclerViewAdapter](https://github.com/luizgrp/SectionedRecyclerViewAdapter)
 
 License
 -------
+
