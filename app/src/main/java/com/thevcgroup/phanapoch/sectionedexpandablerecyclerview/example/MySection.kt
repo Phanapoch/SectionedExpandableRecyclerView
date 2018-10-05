@@ -13,8 +13,8 @@ import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection
 
 class MySection(val section: String, val context: Context) : StatelessSection(SectionParameters.builder()
-        .itemResourceId(R.layout.view_row)
-        .headerResourceId(R.layout.section_header)
+        .itemResourceId(R.layout.item_row)
+        .headerResourceId(R.layout.section_row)
         .build()) {
 
     private val items = arrayOf(
@@ -46,17 +46,18 @@ class MySection(val section: String, val context: Context) : StatelessSection(Se
 
     override fun onBindHeaderViewHolder(holder: RecyclerView.ViewHolder?) {
         val headerHolder = holder as HeaderViewHolder
-        headerHolder.tvTitle.text = section
+        headerHolder.sectionTitle.text = section
     }
+}
 
-    class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val item: SectionedExpandableItem = itemView.findViewById(R.id.my_row) as SectionedExpandableItem
-        val imageView: ImageView = item.headerLayout.findViewById(R.id.imageView) as ImageView
-        val textView: TextView = item.headerLayout.findViewById(R.id.textView) as TextView
-        val button: Button = item.contentLayout.findViewById(R.id.button) as Button
-    }
+// define View Holder
+class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    val item: SectionedExpandableItem = itemView.findViewById(R.id.item_row) as SectionedExpandableItem
+    val imageView: ImageView = item.headerLayout.findViewById(R.id.imageView) as ImageView
+    val textView: TextView = item.headerLayout.findViewById(R.id.textView) as TextView
+    val button: Button = item.contentLayout.findViewById(R.id.button) as Button
+}
 
-    class HeaderViewHolder(headerView: View) : RecyclerView.ViewHolder(headerView) {
-        val tvTitle: TextView = headerView.findViewById(R.id.tvTitle)
-    }
-}// call constructor with layout resources for this Section header and items
+class HeaderViewHolder(headerView: View) : RecyclerView.ViewHolder(headerView) {
+    val sectionTitle: TextView = headerView.findViewById(R.id.sectionTitle)
+}

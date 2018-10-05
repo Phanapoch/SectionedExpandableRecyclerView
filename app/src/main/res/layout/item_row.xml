@@ -12,7 +12,7 @@
     app:cardElevation="4dp">
 
     <com.thevcgroup.phanapoch.sectionedexpandablerecyclerview.SectionedExpandableItem
-        android:id="@+id/my_row"
+        android:id="@+id/item_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layoutContent="@layout/view_content"
