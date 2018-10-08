@@ -30,9 +30,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation project(':sectionedexpandablerecyclerview')
-    implementation project(':recyclerview-expandable')
-    implementation project(':SectionedRecyclerViewAdapter')
+    api project(':sectionedexpandablerecyclerview')
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'

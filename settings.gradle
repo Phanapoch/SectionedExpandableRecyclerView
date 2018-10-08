@@ -1,1 +1,1 @@
-include ':app', ':sectionedexpandablerecyclerview', ':SectionedRecyclerViewAdapter', ':recyclerview-expandable'
+include ':app', ':sectionedexpandablerecyclerview'

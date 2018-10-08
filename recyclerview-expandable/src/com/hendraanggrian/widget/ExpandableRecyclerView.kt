@@ -21,9 +21,9 @@ open class ExpandableRecyclerView @JvmOverloads constructor(context: Context, at
     }
 
     override fun setAdapter(adapter: RecyclerView.Adapter<*>?) {
-//        if (adapter !is Adapter<*>) {
-//            throw IllegalArgumentException("adapter must be an instance of ExpandableRecyclerView.Adapter!")
-//        }
+        if (adapter !is Adapter<*>) {
+            throw IllegalArgumentException("adapter must be an instance of ExpandableRecyclerView.Adapter!")
+        }
         super.setAdapter(adapter)
     }
 

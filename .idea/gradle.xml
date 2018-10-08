@@ -8,9 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/SectionedRecyclerViewAdapter" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/recyclerview-expandable" />
             <option value="$PROJECT_DIR$/sectionedexpandablerecyclerview" />
           </set>
         </option>
