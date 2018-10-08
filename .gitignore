@@ -10,10 +10,10 @@
 /captures
 .externalNativeBuild
 
-
 # Gradle files
 .gradle/
 build/
+SectionedRecyclerViewAdapter/build/
 
 # Local configuration file (sdk path, etc)
 local.properties
