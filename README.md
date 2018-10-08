@@ -3,6 +3,21 @@ An improvement recyclerview-expandable integrated with SectionedRecyclerViewAdap
 
 ![SectionedExpandableRecyclerView GIF](https://github.com/Phanapoch/SectionedExpandableRecyclerView/blob/master/demo/demo1.gif)
 
+Download
+--------
+```gradle
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+  
+dependencies {
+	implementation 'com.github.Phanapoch:SectionedExpandableRecyclerView:0.1.2'
+}
+```
+
 Usage
 -----
 1. create `SectionedExpandableRecyclerView` somewhere in your app
@@ -95,21 +110,6 @@ adapter.addSection(MySection("B", this))
 
 recyclerView.setLayoutManager(layout)
 recyclerView.setAdapter(adapter)
-```
-
-Download
---------
-```gradle
-allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
-}
-  
-dependencies {
-	implementation 'com.github.Phanapoch:SectionedExpandableRecyclerView:0.1.0'
-}
 ```
 
 ## Credits project
