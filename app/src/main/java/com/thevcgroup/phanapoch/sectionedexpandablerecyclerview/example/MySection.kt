@@ -31,13 +31,13 @@ class MySection(val section: String, val context: Context) : StatelessSection(Se
     }
 
     override fun onBindItemViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val itemHolder = holder as ItemViewHolder
+        val itemHolder = holder as? ItemViewHolder
 
         val (drawable, title) = items[position]
 
-        itemHolder.imageView.setImageDrawable(context?.let { ContextCompat.getDrawable(it, drawable) })
-        itemHolder.textView.text = title
-        itemHolder.button.setOnClickListener { Toast.makeText(context, String.format("Clicked! pos: %s section: %s",position,section), Toast.LENGTH_SHORT).show() }
+        itemHolder?.imageView?.setImageDrawable(context?.let { ContextCompat.getDrawable(it, drawable) })
+        itemHolder?.textView?.text = title
+        itemHolder?.button?.setOnClickListener { Toast.makeText(context, String.format("Clicked! pos: %s section: %s",position,section), Toast.LENGTH_SHORT).show() }
     }
 
     override fun getHeaderViewHolder(view: View?): HeaderViewHolder {
@@ -45,17 +45,22 @@ class MySection(val section: String, val context: Context) : StatelessSection(Se
     }
 
     override fun onBindHeaderViewHolder(holder: RecyclerView.ViewHolder?) {
-        val headerHolder = holder as HeaderViewHolder
-        headerHolder.sectionTitle.text = section
+        val headerHolder = holder as? HeaderViewHolder
+        headerHolder?.sectionTitle?.text = section
     }
 }
 
-// define View Holder
+/**
+ *
+ *
+ * Define your content view holder
+ *
+ */
 class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val item: SectionedExpandableItem = itemView.findViewById(R.id.item_row) as SectionedExpandableItem
-    val imageView: ImageView = item.headerLayout.findViewById(R.id.imageView) as ImageView
-    val textView: TextView = item.headerLayout.findViewById(R.id.textView) as TextView
-    val button: Button = item.contentLayout.findViewById(R.id.button) as Button
+    val item: SectionedExpandableItem? = itemView.findViewById(R.id.item_row) as? SectionedExpandableItem
+    val imageView: ImageView? = item?.headerLayout?.findViewById(R.id.imageView) as? ImageView
+    val textView: TextView? = item?.headerLayout?.findViewById(R.id.textView) as? TextView
+    val button: Button? = item?.contentLayout?.findViewById(R.id.button) as? Button
 }
 
 class HeaderViewHolder(headerView: View) : RecyclerView.ViewHolder(headerView) {
