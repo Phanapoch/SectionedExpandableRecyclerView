@@ -69,6 +69,12 @@ class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val button: Button? = item?.contentLayout?.findViewById(R.id.button) as? Button
 }
 
+/**
+ *
+ *
+ * view holder for header
+ *
+ */
 class HeaderViewHolder(headerView: View) : RecyclerView.ViewHolder(headerView) {
     val sectionTitle: TextView = headerView.findViewById(R.id.sectionTitle)
 }

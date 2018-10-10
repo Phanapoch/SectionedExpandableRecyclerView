@@ -116,8 +116,8 @@ recyclerView.setAdapter(adapter)
 ```
 
 ## Credits project
-- [recyclerview-expandable](https://github.com/hendraanggrian/recyclerview-expandable)
-- [SectionedRecyclerViewAdapter](https://github.com/luizgrp/SectionedRecyclerViewAdapter)
+-  [recyclerview-expandable](https://github.com/hendraanggrian/recyclerview-expandable)
+-  [SectionedRecyclerViewAdapter](https://github.com/luizgrp/SectionedRecyclerViewAdapter)
 
 ## License
 SectionedExpandableRecyclerView is available under the MIT license

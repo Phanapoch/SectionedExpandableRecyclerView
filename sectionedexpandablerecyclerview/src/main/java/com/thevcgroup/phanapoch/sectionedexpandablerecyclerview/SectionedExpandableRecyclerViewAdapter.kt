@@ -29,38 +29,52 @@ open class SectionedExpandableRecyclerViewAdapter(val lm: LinearLayoutManager) :
     }
 
     private fun setExpandableBehavior(holder: RecyclerView.ViewHolder, position: Int) {
-        val expandableItem = holder.itemView.findViewWithTag<View>(tag) as SectionedExpandableItem
-        expandableItem.setOnClickListener {
-//            currentPosition = holder.layoutPosition
+        setExpandableClickListener(holder)
+
+        val expandableItem = holder.itemView.findViewWithTag<View>(tag) as? SectionedExpandableItem
+        expandableItem?.let {
+            if (currentPosition != position && it.isOpened) {
+                it.hideNow()
+            } else if (currentPosition == position && !it.isOpened && !it.isClosedByUser) {
+                it.showNow()
+            }
+        }
+
+    }
+
+    private fun setExpandableClickListener(holder: RecyclerView.ViewHolder) {
+        val expandableItem = holder.itemView.findViewWithTag<View>(tag) as? SectionedExpandableItem
+
+        expandableItem?.setOnClickListener {
             currentPosition = holder.adapterPosition
 
-            for (index in 0 until lm.childCount) {
-                if (index != currentPosition - lm.findFirstVisibleItemPosition()) {
-                    try {
-                        val currentExpandableItem = lm.getChildAt(index)!!.findViewWithTag<View>(tag) as SectionedExpandableItem
-                        currentExpandableItem.hide()
-                        Log.d("chen", ""+index)
-                    }catch (e: TypeCastException) {
-                        // FIX ME
-                        // exception occurred while accessing header or footer
+            hideOtherItems()
+            try {
+                val currExpandableItem = lm.getChildAt(currentPosition - lm.findFirstVisibleItemPosition())?.findViewWithTag<View>(tag) as? SectionedExpandableItem
+                currExpandableItem?.let {
+                    if (currExpandableItem.isOpened) {
+                        currExpandableItem.hide()
+                    } else {
+                        currExpandableItem.show()
                     }
                 }
-            }
-            try {
-                val expandableItem = lm.getChildAt(currentPosition - lm.findFirstVisibleItemPosition())!!.findViewWithTag<View>(tag) as SectionedExpandableItem
-                if (expandableItem.isOpened) {
-                    expandableItem.hide()
-                } else {
-                    expandableItem.show()
-                }
-            } catch (e: Exception) {
+            } catch (e: TypeCastException) {
                 e.printStackTrace()
             }
         }
-        if (currentPosition != position && expandableItem.isOpened) {
-            expandableItem.hideNow()
-        } else if (currentPosition == position && !expandableItem.isOpened && !expandableItem.isClosedByUser) {
-            expandableItem.showNow()
+    }
+
+    private fun hideOtherItems(){
+        for (index in 0 until lm.childCount) {
+            if (index != currentPosition - lm.findFirstVisibleItemPosition()) {
+                try {
+                    val currentExpandableItem = lm.getChildAt(index)?.findViewWithTag<View>(tag) as? SectionedExpandableItem
+                    currentExpandableItem?.hide()
+                }catch (e: TypeCastException) {
+                    // FIX ME
+                    // exception occurred while accessing header or footer
+                }
+            }
         }
     }
 }
