@@ -6,6 +6,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.thevcgroup.phanapoch.sectionedexpandablerecyclerview.SectionedExpandableRecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ *
+ *
+ * MainActivity: Usage example for SectionedExpandableRecyclerView
+ *
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

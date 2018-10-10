@@ -12,6 +12,12 @@ import com.thevcgroup.phanapoch.sectionedexpandablerecyclerview.SectionedExpanda
 import io.github.luizgrp.sectionedrecyclerviewadapter.SectionParameters
 import io.github.luizgrp.sectionedrecyclerviewadapter.StatelessSection
 
+/**
+ *
+ *
+ * MySection: Custom your own view in section instead adapter
+ *
+ */
 class MySection(val section: String, val context: Context) : StatelessSection(SectionParameters.builder()
         .itemResourceId(R.layout.item_row)
         .headerResourceId(R.layout.section_row)
@@ -26,8 +32,8 @@ class MySection(val section: String, val context: Context) : StatelessSection(Se
         return items.size // number of items of this section
     }
 
-    override fun getItemViewHolder(view: View?): ItemViewHolder {
-        return ItemViewHolder(view!!)
+    override fun getItemViewHolder(view: View): ItemViewHolder {
+        return ItemViewHolder(view)
     }
 
     override fun onBindItemViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -40,8 +46,8 @@ class MySection(val section: String, val context: Context) : StatelessSection(Se
         itemHolder?.button?.setOnClickListener { Toast.makeText(context, String.format("Clicked! pos: %s section: %s",position,section), Toast.LENGTH_SHORT).show() }
     }
 
-    override fun getHeaderViewHolder(view: View?): HeaderViewHolder {
-        return HeaderViewHolder(view!!)
+    override fun getHeaderViewHolder(view: View): HeaderViewHolder {
+        return HeaderViewHolder(view)
     }
 
     override fun onBindHeaderViewHolder(holder: RecyclerView.ViewHolder?) {
