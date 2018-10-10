@@ -1,3 +1,6 @@
+[![Release](https://jitpack.io/v/Phanapoch/SectionedExpandableRecyclerView.svg)](https://jitpack.io/#Phanapoch/SectionedExpandableRecyclerView)
+[![Download](https://jitpack.io/v/Phanapoch/SectionedExpandableRecyclerView/month.svg)](https://jitpack.io/#Phanapoch/SectionedExpandableRecyclerView)
+
 # SectionedExpandableRecyclerView
 An improvement recyclerview-expandable integrated with SectionedRecyclerViewAdapter
 
@@ -118,4 +121,4 @@ recyclerView.setAdapter(adapter)
 
 License
 -------
-
+SectionedExpandableRecyclerView is available under the MIT license
