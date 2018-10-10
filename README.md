@@ -1,5 +1,6 @@
 [![Release](https://jitpack.io/v/Phanapoch/SectionedExpandableRecyclerView.svg)](https://jitpack.io/#Phanapoch/SectionedExpandableRecyclerView)
 [![Download](https://jitpack.io/v/Phanapoch/SectionedExpandableRecyclerView/month.svg)](https://jitpack.io/#Phanapoch/SectionedExpandableRecyclerView)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/021dba3a28fa423393794975e115608d)](https://www.codacy.com/app/Phanapoch/SectionedExpandableRecyclerView?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Phanapoch/SectionedExpandableRecyclerView&amp;utm_campaign=Badge_Grade)
 
 # SectionedExpandableRecyclerView
 An improvement recyclerview-expandable integrated with SectionedRecyclerViewAdapter
