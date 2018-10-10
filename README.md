@@ -4,10 +4,11 @@
 # SectionedExpandableRecyclerView
 An improvement recyclerview-expandable integrated with SectionedRecyclerViewAdapter
 
+Demo: [Nexus 5](https://appetize.io/app/3g4fpbhvqnpxgbwprxgrp65hmr?device=nexus5&language=en)
+
 ![SectionedExpandableRecyclerView GIF](https://github.com/Phanapoch/SectionedExpandableRecyclerView/blob/master/demo/demo1.gif)
 
-Download
---------
+## Download
 ```gradle
 allprojects {
 	repositories {
@@ -21,9 +22,8 @@ dependencies {
 }
 ```
 
-Usage
------
-1. create `SectionedExpandableRecyclerView` somewhere in your app
+## Usage
+1.  create `SectionedExpandableRecyclerView` somewhere in your app
 ```xml
  <com.thevcgroup.phanapoch.sectionedexpandablerecyclerview.SectionedExpandableRecyclerView
         android:id="@+id/recyclerView"
@@ -33,7 +33,7 @@ Usage
         android:paddingBottom="8dp"
         android:paddingTop="8dp" />
 ```
-2. define your item_row and section_row
+2.  define your item_row and section_row
 ```xml
 <!-- item_row -->
     <com.thevcgroup.phanapoch.sectionedexpandablerecyclerview.SectionedExpandableItem
@@ -51,7 +51,7 @@ Usage
         android:id="@+id/sectionTitle"/>
 
 ```
-3. custom a section class by extend `StatelessSection`
+3.  custom a section class by extend `StatelessSection`
 ```kotlin
 class MySection(val section: String, val context: Context) : StatelessSection(SectionParameters.builder()
         .itemResourceId(R.layout.item_row)
@@ -90,7 +90,7 @@ class MySection(val section: String, val context: Context) : StatelessSection(Se
     }
 }
 ```
-4. ViewHolder part
+4.  ViewHolder part
 ```kotlin
 class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val item: SectionedExpandableItem = itemView.findViewById(R.id.item_row) as SectionedExpandableItem
@@ -103,7 +103,7 @@ class HeaderViewHolder(headerView: View) : RecyclerView.ViewHolder(headerView) {
 }
 ```
 
-5. final setup your recyclerview
+5.  final setup your recyclerview
 ```kotlin
 val layout = LinearLayoutManager(this)
 val adapter = SectionedExpandableRecyclerViewAdapter(layout)
@@ -119,6 +119,5 @@ recyclerView.setAdapter(adapter)
 - [recyclerview-expandable](https://github.com/hendraanggrian/recyclerview-expandable)
 - [SectionedRecyclerViewAdapter](https://github.com/luizgrp/SectionedRecyclerViewAdapter)
 
-License
--------
+## License
 SectionedExpandableRecyclerView is available under the MIT license
