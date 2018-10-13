@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2f493acc650c44a88706a2be93da984d)](https://app.codacy.com/app/Phanapoch/SectionedExpandableRecyclerView?utm_source=github.com&utm_medium=referral&utm_content=Phanapoch/SectionedExpandableRecyclerView&utm_campaign=Badge_Grade_Dashboard)
 [![Release](https://jitpack.io/v/Phanapoch/SectionedExpandableRecyclerView.svg)](https://jitpack.io/#Phanapoch/SectionedExpandableRecyclerView)
 [![Download](https://jitpack.io/v/Phanapoch/SectionedExpandableRecyclerView/month.svg)](https://jitpack.io/#Phanapoch/SectionedExpandableRecyclerView)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/021dba3a28fa423393794975e115608d)](https://www.codacy.com/app/Phanapoch/SectionedExpandableRecyclerView?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Phanapoch/SectionedExpandableRecyclerView&amp;utm_campaign=Badge_Grade)
