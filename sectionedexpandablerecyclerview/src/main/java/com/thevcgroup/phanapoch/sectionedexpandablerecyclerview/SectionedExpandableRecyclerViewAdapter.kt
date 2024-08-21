@@ -15,7 +15,7 @@ import io.github.luizgrp.sectionedrecyclerviewadapter.SectionedRecyclerViewAdapt
  */
 open class SectionedExpandableRecyclerViewAdapter(val lm: LinearLayoutManager) : SectionedRecyclerViewAdapter() {
     private var currentPosition = -1
-    private val tag: String = "com.hendraanggrian.widget.ExpandableItem"
+    private val tag: String = "com.hendraanggrian.recyclerview.widget.ExpandableItem"
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         super.onBindViewHolder(holder, position)
@@ -44,10 +44,8 @@ open class SectionedExpandableRecyclerViewAdapter(val lm: LinearLayoutManager) :
 
     private fun setExpandableClickListener(holder: RecyclerView.ViewHolder) {
         val expandableItem = holder.itemView.findViewWithTag<View>(tag) as? SectionedExpandableItem
-
         expandableItem?.setOnClickListener {
             currentPosition = holder.adapterPosition
-
             hideOtherItems()
             try {
                 val currExpandableItem = lm.getChildAt(currentPosition - lm.findFirstVisibleItemPosition())?.findViewWithTag<View>(tag) as? SectionedExpandableItem

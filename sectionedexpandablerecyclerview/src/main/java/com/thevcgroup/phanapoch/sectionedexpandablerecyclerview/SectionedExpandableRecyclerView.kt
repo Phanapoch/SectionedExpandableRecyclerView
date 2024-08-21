@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hendraanggrian.widget.ExpandableRecyclerView
 
 /**
  *

@@ -32,8 +32,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
-    api 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.2.0'
-    api 'com.hendraanggrian:recyclerview-expandable:0.4.0'
+    api 'com.github.luizgrp:SectionedRecyclerViewAdapter:1.2.0'
+    api 'com.github.hendraanggrian:recyclerview-expandable:0.1'
 //    api project(':SectionedRecyclerViewAdapter')
 //    api project(':recyclerview-expandable')
 
@@ -44,4 +44,5 @@ dependencies {
 }
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }

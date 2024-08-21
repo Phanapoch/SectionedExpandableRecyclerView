@@ -2,7 +2,7 @@ package com.thevcgroup.phanapoch.sectionedexpandablerecyclerview
 
 import android.content.Context
 import android.util.AttributeSet
-import com.hendraanggrian.widget.ExpandableItem
+import com.hendraanggrian.recyclerview.widget.ExpandableItem
 
 /**
  *

@@ -19,7 +19,7 @@ allprojects {
 }
   
 dependencies {
-	implementation 'com.github.Phanapoch:SectionedExpandableRecyclerView:0.1.2'
+	implementation 'com.github.Phanapoch:SectionedExpandableRecyclerView:0.1.3'
 }
 ```
 
